@@ -42,15 +42,17 @@
 					<span><!-- number of people online --></span>
 				</div>
 				<div flex>
-					<paper-input label="Your Name" value="{{searchTerm}}"  on-keyup="{{filter(searchTerm)}}"></paper-input>
-					<polymer-element name="list-view">				  
+					<paper-input label="Search..." value="{{searchTerm}}"  on-keyup="{{filter(searchTerm)}}"></paper-input>
+					<div class="menu">
 					  <template repeat="{{d in data | filter(searchTerm) }}">
 						<div class="item" flex>
-							<img src="{{d.url}}" height="50" />
-				          	<span class="from">{{d.text}}</span>
+							<a href="details.html">
+								<img src="{{d.url}}" height="60" />
+				          		<span class="from">{{d.text}}</span>
+				          	</a>
 				        </div>
 					  </template>
-					</polymer-element>
+					</div>
 				</div>
 			</core-scaffold>			
 		</template>		

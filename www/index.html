@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>famo.us App</title>
+		<title>Scanr</title>
 		<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,22 +37,15 @@
 				</core-header-panel> 
 				<!-- App Title --> 
 				<div tool layout horizontal flex>
-					<span flex>Kitteh Anonymous</span>
+					<span flex>Scanr</span>
 					<core-icon icon="account-circle"></core-icon>
 					<span><!-- number of people online --></span>
 				</div>
 				<div flex>
-					<paper-input label="Search..." value="{{searchTerm}}"  on-keyup="{{filter(searchTerm)}}"></paper-input>
-					<div class="menu">
-					  <template repeat="{{d in data | filter(searchTerm) }}">
-						<div class="item" flex>
-							<a href="details.html">
-								<img src="{{d.url}}" height="60" />
-				          		<span class="from">{{d.text}}</span>
-				          	</a>
-				        </div>
-					  </template>
-					</div>
+					<section>
+					<div style="color:blue;">
+						<core-icon icon="send" style="width:140px;height:140px;transform: rotate(-90deg)"></core-icon>
+					</section>
 				</div>
 			</core-scaffold>			
 		</template>		

@@ -44,7 +44,8 @@
 				<div flex>
 					<section>
 						<div horizontal center-justified layout style="padding-top:150px;">
-							<a href="search.html"><core-icon icon="send" style="width:140px;height:140px;transform: rotate(-90deg)"></core-icon></a>
+							<core-icon on-click="{{capturePhoto}}" icon="send" style="width:140px;height:140px;transform: rotate(-90deg)"></core-icon>
+							<paper-spinner class="blue" active></paper-spinner>
 						</div>
 					</section>
 				</div>
@@ -52,4 +53,29 @@
 		</template>		
 	</body>
 	<script src="src/details.js"></script>
+	<script>
+	    var template = document.querySelector('template[is=auto-binding]');
+        template.capturePhoto = function(e){
+            if (!navigator.camera) {
+                alert('No camera capability');
+                return;
+            }
+            navigator.camera.getPicture(function(imgData){
+                console.log(imgData);
+                window.location.href='search.html';
+                /*var img = new ImageSurface({
+                    size: [300, 300]
+                });
+                img.setContent("data:image/jpeg;base64,"+imgData);
+                dialog.add(img);*/
+            },function(message){
+                alert('error');
+            },{
+                quality: 50,
+                destinationType: Camera.DestinationType.DATA_URL,
+                sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
+                encodingType: 0     // 0=JPG 1=PNG
+            });
+        };
+	</script>
 </html>

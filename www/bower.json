@@ -1,0 +1,13 @@
+{
+  "name": "scanner-client",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sagivo/scanner-client",
+  "authors": [
+    "Sagiv <sagiv4@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5"
+  }
+}

@@ -1,1 +1,93 @@
-<h1>Details</h1>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>famo.us App</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		
+		<!-- shims for backwards compatibility -->
+		<script type="text/javascript" src="http://code.famo.us/lib/functionPrototypeBind.js"></script>
+		<script type="text/javascript" src="http://code.famo.us/lib/classList.js"></script>
+		<script type="text/javascript" src="http://code.famo.us/lib/requestAnimationFrame.js"></script>
+
+		<!-- famous -->
+		<link rel="stylesheet" type="text/css" href="http://code.famo.us/famous/0.3/famous.css" />
+		<script type="text/javascript" src="http://code.famo.us/famous/0.3/famous-global.min.js"></script>
+
+		<!-- app code -->        
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		
+		<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+		<link rel="import" href="bower_components/core-item/core-item.html"> 
+		<link rel="import" href="bower_components/paper-input/paper-input.html">
+		<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+		<link rel="import" href="bower_components/core-icon/core-icon.html">
+		<link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-icons/paper-icon-button.html">
+		<core-icon src="//www.polymer-project.org/images/icons/android.svg"></core-icon>
+		<style shim-shadowdom>
+		 paper-button {
+      color: #4285f4;
+      cursor: pointer;
+    }
+		</style>
+	</head>
+	<body fullbleed unresolved>
+		<template is="auto-binding">
+			<core-scaffold> 
+				<!-- Drawer panel --> 
+				<core-header-panel navigation flex> 
+					<core-toolbar class="tall"> 
+					<!-- an avatar and username will be here --> 
+					</core-toolbar>
+				</core-header-panel> 
+				<!-- App Title --> 
+				<div tool layout horizontal flex>
+					<span flex>Scanr</span>
+					<core-icon icon="account-circle"></core-icon>
+					<span><!-- number of people online --></span>
+				</div>
+				<div flex>
+					<a href="images/test.jpg"><img src="images/test.jpg" height="400px;"></a><br/>					
+					<h3>Atalantic.net <i>5/3/15 @TC Disrupt</i></h3>					
+					Fast SSd Cloud Hosting<br/>
+					Ready in
+					30 Seconds
+					$25 Free Credit
+					When you use code TECHCRUNCH25
+					<ul>
+						<li>No Contract</li>
+						<li>RESTFUL API</li>
+						<li>Pay as you go</li>
+						<li>Windows, Linux, FreeBSD</li>
+						<li>One-Click Apps</li>
+						<li>Global Data Center</li>
+					</ul>
+
+					<section>
+						<paper-button raised>
+							<core-icon icon="settings-phone"></core-icon>Call
+						</paper-button>
+						<paper-button raised>
+				      <core-icon icon="mail"></core-icon>
+				      Email
+				    </paper-button>
+				    <paper-button raised>
+				      <core-icon icon="info"></core-icon>
+				      Site
+				    </paper-button>
+				    <paper-button raised>
+				      <core-icon icon="forward"></core-icon>
+				      Navigate
+				    </paper-button>
+					</section>
+				</div>
+			</core-scaffold>			
+		</template>		
+	</body>
+	<script src="src/details.js"></script>
+</html>

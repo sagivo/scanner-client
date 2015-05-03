@@ -42,11 +42,18 @@
 					<span><!-- number of people online --></span>
 				</div>
 				<div flex>
-					<section>
-						<div horizontal center-justified layout style="padding-top:150px;">
-							<a href="search.html"><core-icon icon="send" style="width:140px;height:140px;transform: rotate(-90deg)"></core-icon></a>
-						</div>
-					</section>
+					<paper-input label="Search..." value="{{searchTerm}}"  on-keyup="{{filter(searchTerm)}}" style="width:100%; padding:0 10px;"></paper-input>
+					<div class="menu">
+					  <template repeat="{{d in data | filter(searchTerm) }}">
+						<div class="item" flex style="text-overflow:ellipsis;height:100px;overflow: hidden;padding:10px;">
+							<a href="details.html">
+								<img src="{{d.url}}" height="100" width="100" style="float:left;"/>
+								{{d.text}}
+				      </a>
+				      <div class="from" style="clear:both;"></div>
+				    </div>
+					  </template>
+					</div>
 				</div>
 			</core-scaffold>			
 		</template>		
